@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Password generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="inputContainer">
+            <input class="passwordInput" type="text" disabled>
+            <i class='bx bxs-copy'></i>
+        </div>
+        <div class="strengthIndicator"></div>
+        <div class="passwordLength">
+            <div class="details">
+                <label class="title">Password Length</label>
+                <span class="lengthIndicator"></span>
+            </div>
+            <input class="lengthInput" type="range" min="5" max="20" value="8">
+        </div>
+        <div class="passwordSettings">
+            <label class="title">Password Settings</label>
+            <ul class="options">
+                <li class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Include lowercase</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Include Uppercase</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="excludeDuplicate">
+                    <label for="excludeDuplicate">Exclude Duplicate</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="saveSettings">
+                    <label for="saveSettings">Save Settings</label>
+                </li>
+            </ul>
+        </div>
+        <button class="generateBtn">Generate Password</button>
+    </div>
+</body>
+</html>
