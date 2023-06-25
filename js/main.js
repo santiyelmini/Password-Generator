@@ -33,6 +33,7 @@ function generatePassword() {
       }
     }
   });
+
   for (let i = 0; i < passwordLength; i++) {
     let randomChar =
       staticPassword[Math.floor(Math.random() * staticPassword.length)];
@@ -45,12 +46,6 @@ function generatePassword() {
     }
   }
   passwordInput.value = randomPassword;
-
-  if (saveSettingsCheckbox.checked) {
-    saveCheckboxState();
-  } else {
-    clearCheckboxState();
-  }
 }
 
 function updateStrength() {
@@ -107,7 +102,17 @@ options.forEach(option => {
   option.addEventListener("change", saveCheckboxState);
 });
 
+saveSettingsCheckbox.addEventListener("change", function() {
+  if (saveSettingsCheckbox.checked) {
+    saveCheckboxState();
+  } else {
+    clearCheckboxState();
+  }
+});
+
 loadCheckboxState();
-updateData();
+generatePassword();
+
+
 
 
